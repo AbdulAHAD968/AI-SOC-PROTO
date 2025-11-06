@@ -14,3 +14,6 @@
 <img src="./assets/5.PNG" alt="The cover image">
 ---
 <img src="./assets/6.PNG" alt="The cover image">
+
+# Integrate ABUSEIP DB soon
+- Added functional backend, since python code cannot be executed on the vercel so it wont work.

@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from flask import request
 import os
 from flask_cors import CORS
-from datetime import datetime  # ✅ Import added
+from datetime import datetime
 from models.rule_engine import RuleEngine
 from models.log_parser import LogParser
 from flask_cors import CORS
@@ -74,7 +74,7 @@ class LogCollection(Resource):
 
         # Add timestamp if not provided
         if 'timestamp' not in data:
-            data['timestamp'] = datetime.utcnow().isoformat()  # ✅ Fixed line
+            data['timestamp'] = datetime.utcnow().isoformat()
 
         log_id = db.logs_raw.insert_one(data).inserted_id
 
@@ -118,3 +118,4 @@ def process_for_alerts(parsed_log):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
